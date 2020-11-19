@@ -37,7 +37,7 @@ phone.addEventListener('input', function () {
 const pass = document.querySelector('#pwd');
 const passError = document.querySelector('.pass-error');
 pass.addEventListener('input', function () {
-    let passRegex = RegExp('[A-z0-9@#$%*]{8,}$');
+    let passRegex = RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.?[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$');
     if (passRegex.test(pass.value)) {
         passError.textContent = "";
     } else {
